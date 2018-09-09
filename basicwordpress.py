@@ -4,10 +4,10 @@ from wordpress_xmlrpc.methods.users import GetUserInfo
 from wordpress_xmlrpc.compat import xmlrpc_client
 from wordpress_xmlrpc.methods import media, posts
 
-wp = Client('http://yourwordpress.com/xmlrpc.php', 'username', 'password')
+wp = Client('http://yourwordpress.com/xmlrpc.php', 'username', 'password') #add your wordpress website, username and password
 client = wp
 
-filename="yourjpgimage.jpg"
+filename="yourjpgimage.jpg" #add the path to the jpg you want to load
 
 # prepare metadata
 data = {
@@ -36,8 +36,8 @@ attachment_id = response['id']
 post = WordPressPost()
 
 post.thumbnail = attachment_id
-post.title = "some title"
-post.content = "some content"
+post.title = "some title" #add some title text here
+post.content = "some content" # add some context text here
 post.comment_status = 'open' #turn on comments or closed for off
 
 post.terms_names = {
